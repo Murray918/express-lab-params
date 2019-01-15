@@ -44,13 +44,9 @@ app.get('/magic/:question', (request, response) => {
 app.get('/fibonacci/:number', (request, response) => {
 	response.send(`${calculateFibonacci(request.params.number)}`);
 });
-let fibArray = [];
 function calculateFibonacci(num) {
-	if (isSquare(5 * (num * num) - 4) || isSquare(5 * (num * num) + 4)) {
-		return true;
-	} else {
-		return false;
-	}
+	if (num < 2) return 1;
+	return calculateFibonacci(num - 1) + calculateFibonacci(num - 2);
 }
 function isSquare(num) {
 	if (Math.sqrt(num) % 1 != 0) return false;
