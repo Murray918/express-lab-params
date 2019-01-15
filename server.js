@@ -41,6 +41,21 @@ app.get('/magic/:question', (request, response) => {
 		}</p>`
 	);
 });
+app.get('/fibonacci/:number', (request, response) => {
+	response.send(`${calculateFibonacci(request.params.number)}`);
+});
+let fibArray = [];
+function calculateFibonacci(num) {
+	if (isSquare(5 * (num * num) - 4) || isSquare(5 * (num * num) + 4)) {
+		return true;
+	} else {
+		return false;
+	}
+}
+function isSquare(num) {
+	if (Math.sqrt(num) % 1 != 0) return false;
+	else return true;
+}
 function randomNumber(max) {
 	return Math.floor(Math.random() * max);
 }
