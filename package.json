@@ -1,0 +1,22 @@
+{
+  "name": "express-lab-params",
+  "version": "1.0.0",
+  "description": "Practice setting up express applications",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwerbin95/express-lab-params.git"
+  },
+  "author": "Jacob Werbin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwerbin95/express-lab-params/issues"
+  },
+  "homepage": "https://github.com/jwerbin95/express-lab-params#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
